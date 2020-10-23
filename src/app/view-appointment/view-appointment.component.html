@@ -1,0 +1,65 @@
+<p class="mainblock bg-danger center text-white h1">View Appointment</p>
+<div class="main blocktable-responsive-sm">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    Sl NO
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+                    City
+                </th>
+                <th>
+                    Package
+                </th>
+                <th>
+                    Trainer Preference
+                </th>
+                <th>
+                    Phone
+                </th>
+                <th>
+                    
+                </th>
+                <th>
+
+                </th>
+            </tr>
+        </thead>
+        <tr *ngFor='let appointment of appointments'>
+            <td>
+                {{appointment.id}}
+            </td>
+            <td>
+                {{appointment.firstname}}
+            </td>
+            <td>
+                {{appointment.streetaddress}}
+            </td>
+            <td>
+                {{appointment.city}}
+            </td>
+            <td>
+                {{appointment.packages}}
+            </td>
+            <td>
+                {{appointment.trainerpreference}}
+            </td>
+            <td>
+                {{appointment.phonenumber}}
+            </td>
+            <td>
+                <button (click)="editfitness(appointment.id)"><i class="fa fa-edit custom"></i></button>
+            </td>
+            <td>
+                <button (click)="confirmation(appointment.id)"><i  class="fa fa-remove text-danger"></i></button>
+            </td>
+        </tr>
+    </table>
+</div>

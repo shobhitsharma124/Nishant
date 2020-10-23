@@ -1,0 +1,194 @@
+<p *ngIf="id>0;else place" class="mainblock  bg-danger center text-white h1">Edit Appointment</p>
+<ng-template #place><p class="bg-danger center text-white h1">Place Appointment</p></ng-template>
+
+<form class="mainblock dark text-white" [formGroup]="fitnessForm" (ngSubmit)="onSubmit()" novalidate>
+    
+    <div class="form-group">
+        <label for="exampleInputfirstname">First Name</label>
+        <input type="text" class="form-control" formControlName="firstname" placeholder="First Name">
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.firstname.touched && fitnessForm.controls.firstname.errors?.required">
+            Please enter first name.!
+        </small>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.firstname.touched && fitnessForm.controls.firstname.errors?.pattern">
+            Enter the valid First Name .!
+        </small>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputlastname">Last Name</label>
+        <input type="text" class="form-control" formControlName="lastname" placeholder="Last Name">
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.lastname.touched && fitnessForm.controls.lastname.errors?.required">
+            Please enter last name.!
+        </small>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.lastname.touched && fitnessForm.controls.lastname.errors?.pattern">
+            Please enter valid last name.!
+        </small>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputage">Age</label>
+        <input type="number" class="form-control" formControlName="age" placeholder="Age">
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.age.touched && fitnessForm.controls.age.errors?.required">
+            Please enter your age.!
+        </small>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.age.touched && fitnessForm.controls.age.errors?.min">
+            Age should be greater than 18.!
+        </small>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.age.touched && fitnessForm.controls.age.errors?.max">
+            Age should be less than 60.!
+        </small>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputphonenumber">Phone Number</label>
+        <input type="number" class="form-control" formControlName="phonenumber" placeholder="Phone Number">
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.phonenumber.touched && fitnessForm.controls.phonenumber.errors?.required">
+            Please enter phone number.!
+        </small>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.phonenumber.touched && fitnessForm.controls.phonenumber.errors?.pattern">
+            Please enter valid phone number.!
+        </small>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputemail">Email</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="Email">
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.email.touched && fitnessForm.controls.email.errors?.required">
+            Please enter email.!
+        </small>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.email.touched && fitnessForm.controls.email.errors?.pattern">
+            Enter the valid email .!
+        </small>
+    </div>
+    <fieldset>
+        <legend>Address Details</legend>
+    <div class="form-group">
+        <label for="exampleInputaddress">Street Address</label>
+        <input type="text" class="form-control" formControlName="streetaddress" placeholder="Street Address">
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.streetaddress.touched && fitnessForm.controls.streetaddress.errors?.required">
+            Please enter Street Address.!
+        </small>
+    </div>   
+    <div class="form-group">
+        <label for="exampleInputcity">City</label>
+        <input type="text" class="form-control" formControlName="city" placeholder="City">
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.city.touched && fitnessForm.controls.city.errors?.required">
+            Please enter City.!
+        </small>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.city.touched && fitnessForm.controls.city.errors?.pattern">
+            Please enter valid City.!
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputstate">State</label>
+        <input type="text" class="form-control" formControlName="state" placeholder="State">
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.state.touched && fitnessForm.controls.state.errors?.required">
+            Please enter State.!
+        </small>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.state.touched && fitnessForm.controls.state.errors?.pattern">
+            Please enter valid State.!
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputcountry">Country</label>
+        <input type="text" class="form-control" formControlName="country" placeholder="Country">
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.country.touched && fitnessForm.controls.country.errors?.required">
+            Please enter Country.!
+        </small>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.country.touched && fitnessForm.controls.country.errors?.pattern">
+            Please enter valid Country.!
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputpincode">Pincode</label>
+        <input type="number" class="form-control" formControlName="pincode" placeholder="Pincode">
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.pincode.touched && fitnessForm.controls.pincode.errors?.required">
+            Please enter pincode.!
+        </small>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.pincode.touched && fitnessForm.controls.pincode.errors?.pattern">
+            Please enter valid pincode.!
+        </small>
+    </div>
+    </fieldset>
+    <div class="form-group">
+        <label for="exampleInputselectpreference"></label><h4 class="text-success">Select Gender</h4>
+        <select class="form-control" id="exampleInputselectpreference" formControlName="trainerpreference">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Any</option>
+        </select>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.trainerpreference.touched && fitnessForm.controls.trainerpreference.errors?.required">
+            Please Select Trainer Preference.!
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputselectpreference">Physiotherapist</label><h4 class="text-success">Physiotherapist</h4>
+        <select class="form-control" formControlName="physiotherapist">
+            <option>Yes</option>
+            <option>No</option>
+        </select>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.physiotherapist.touched && fitnessForm.controls.physiotherapist.errors?.required">
+            Please Select Physiotherapist option.!
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputselectpackage">Select Packages</label><h4 class="text-success">Select Packages</h4>
+        <select class="form-control" formControlName="packages">
+            <option>500</option>
+            <option>1000</option>
+            <option>3000</option>
+        </select>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.packages.touched && fitnessForm.controls.packages.errors?.required">
+            Please Select Packages.!
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputselectpackage">Select INR</label><h4 class="text-success">Select INR</h4>
+        <select class="form-control" formControlName="inr">
+            <option>500</option>
+            <option>1000</option>
+            <option>3000</option>
+        </select>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.inr.touched && fitnessForm.controls.inr.errors?.required">
+            Please Select INR.!
+        </small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputselectpackage">Select Paisa</label><h4 class="text-success">Select Number of Appointment</h4>
+        <select class="form-control" formControlName="paisa">
+            <option>10</option>
+            <option>20</option>
+            <option>30</option>
+        </select>
+        <small class="form-text text-muted"
+            *ngIf="fitnessForm.controls.paisa.touched && fitnessForm.controls.paisa.errors?.required">
+            Please Select Paisa.!
+        </small>
+    </div>
+    <button [disabled] = "!fitnessForm.valid" class="btn btn-success btn-lg btn-block" type="submit" >Submit</button>
+
+</form>

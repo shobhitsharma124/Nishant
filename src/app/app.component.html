@@ -1,0 +1,25 @@
+<div class="logo float-left pr-5">
+<img src="https://lh3.googleusercontent.com/proxy/yEMHj0wVI078aPUGAtzs_A8UbGq3-1GNlPZMPRCxlX31AMUkhBWZt8qLO5HxiGUrNXSs5La1uLI_lzHy0hvLRdJ1fLUukJPRRe9I_5xsol5p9CtdSNzfuW9J9f-l7dtu-LI"  width="80" height="60" >
+  
+</div>
+<div class="navbar bg-dark" >
+  <button class="btn btn-outline-warning pl-2" (click)="landingpage()">Home</button><br>
+  <button class="btn btn-outline-warning" (click)="placeAppointment()">Place Appointment</button><br>
+  <button class="btn btn-outline-warning" (click)="viewAppointment()">View Appointment</button><br>
+  <button class="btn btn-outline-warning" (click)="search()">Search</button><br>
+  <button class="btn btn-outline-warning" (click)="contactUspage()">Contact Us</button>
+</div>
+
+<div id="mySidenav" class="sidenav bg-success">
+  
+  <button class="btn btn-dark btn-lg btn-block" (click)="landingpage()">Home</button><br>
+  <button class="btn btn-dark btn-lg btn-block" (click)="placeAppointment()">Place </button><br>
+  <button class="btn btn-dark btn-lg btn-block" (click)="viewAppointment()">View </button><br>
+  <button class="btn btn-dark btn-lg btn-block" (click)="search()">search </button><br>
+  <button class="btn btn-dark btn-lg btn-block" (click)="contactUspage()">Contact Us</button>
+</div>
+
+
+
+
+<router-outlet></router-outlet>
